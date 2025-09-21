@@ -1,74 +1,74 @@
-import logo from "./logo.svg";
-import search_icon from "./search_icon.svg";
-import remove_icon from "./remove_icon.svg";
-import arrow_right_icon_colored from "./arrow_right_icon_colored.svg";
-import star_icon from "./star_icon.svg";
-import star_dull_icon from "./star_dull_icon.svg";
-import cart_icon from "./cart_icon.svg";
-import nav_cart_icon from "./nav_cart_icon.svg";
-import add_icon from "./add_icon.svg";
-import refresh_icon from "./refresh_icon.svg";
-import product_list_icon from "./product_list_icon.svg";
-import order_icon from "./order_icon.svg";
-import upload_area from "./upload_area.png";
-import profile_icon from "./profile_icon.png";
-import menu_icon from "./menu_icon.svg";
-import delivery_truck_icon from "./delivery_truck_icon.svg";
-import leaf_icon from "./leaf_icon.svg";
-import coin_icon from "./coin_icon.svg";
-import box_icon from "./box_icon.svg";
-import trust_icon from "./trust_icon.svg";
-import black_arrow_icon from "./black_arrow_icon.svg";
-import white_arrow_icon from "./white_arrow_icon.svg";
-import main_banner_bg from "./main_banner_bg.png";
-import main_banner_bg_sm from "./main_banner_bg_sm.png";
-import bottom_banner_image from "./bottom_banner_image.png";
-import bottom_banner_image_sm from "./bottom_banner_image_sm.png";
-import add_address_iamge from "./add_address_image.svg";
-import organic_vegitable_image from "./organic_vegitable_image.png";
-import fresh_fruits_image from "./fresh_fruits_image.png";
-import bottles_image from "./bottles_image.png";
-import maggi_image from "./maggi_image.png";
-import dairy_product_image from "./dairy_product_image.png";
-import bakery_image from "./bakery_image.png";
-import grain_image from "./grain_image.png";
-import potato_image_1 from "./potato_image_1.png";
-import potato_image_2 from "./potato_image_2.png";
-import potato_image_3 from "./potato_image_3.png";
-import potato_image_4 from "./potato_image_4.png";
-import tomato_image from "./tomato_image.png";
-import carrot_image from "./carrot_image.png";
-import apple_image from "./apple_image.png";
-import amul_milk_image from "./amul_milk_image.png";
-import coca_cola_image from "./coca_cola_image.png";
-import brown_bread_image from "./brown_bread_image.png";
-import basmati_rice_image from "./basmati_rice_image.png";
-import paneer_image from "./paneer_image.png";
-import orange_image from "./orange_image.png";
-import pepsi_image from "./pepsi_image.png";
-import wheat_flour_image from "./wheat_flour_image.png";
-import cheese_image from "./cheese_image.png";
-import eggs_image from "./eggs_image.png";
-import spinach_image_1 from "./spinach_image_1.png";
-import onion_image_1 from "./onion_image_1.png";
-import banana_image_1 from "./banana_image_1.png";
-import mango_image_1 from "./mango_image_1.png";
-import grapes_image_1 from "./grapes_image_1.png";
-import paneer_image_2 from "./paneer_image_2.png";
-import sprite_image_1 from "./sprite_image_1.png";
-import fanta_image_1 from "./fanta_image_1.png";
-import seven_up_image_1 from "./seven_up_image_1.png";
-import top_ramen_image from "./top_ramen_image.png";
-import knorr_soup_image from "./knorr_soup_image.png";
-import yippee_image from "./yippee_image.png";
-import maggi_oats_image from "./maggi_oats_image.png";
-import butter_croissant_image from "./butter_croissant_image.png";
-import chocolate_cake_image from "./chocolate_cake_image.png";
-import whole_wheat_bread_image from "./whole_wheat_bread_image.png";
-import vanilla_muffins_image from "./vanilla_muffins_image.png";
-import quinoa_image from "./quinoa_image.png";
-import brown_rice_image from "./brown_rice_image.png";
-import barley_image from "./barley_image.png";
+const logo = "/images/logo.svg";
+const search_icon = "/images/search_icon.svg";
+const remove_icon = "/images/remove_icon.svg";
+const arrow_right_icon_colored = "/images/arrow_right_icon_colored.svg";
+const star_icon = "/images/star_icon.svg";
+const star_dull_icon = "/images/star_dull_icon.svg";
+const cart_icon = "/images/cart_icon.svg";
+const nav_cart_icon = "/images/nav_cart_icon.svg";
+const add_icon = "/images/add_icon.svg";
+const refresh_icon = "/images/refresh_icon.svg";
+const product_list_icon = "/images/product_list_icon.svg";
+const order_icon = "/images/order_icon.svg";
+const upload_area = "/images/upload_area.png";
+const profile_icon = "/images/profile_icon.png";
+const menu_icon = "/images/menu_icon.svg";
+const delivery_truck_icon = "/images/delivery_truck_icon.svg";
+const leaf_icon = "/images/leaf_icon.svg";
+const coin_icon = "/images/coin_icon.svg";
+const box_icon = "/images/box_icon.svg";
+const trust_icon = "/images/trust_icon.svg";
+const black_arrow_icon = "/images/black_arrow_icon.svg";
+const white_arrow_icon = "/images/white_arrow_icon.svg";
+const main_banner_bg = "/images/main_banner_bg.png";
+const main_banner_bg_sm = "/images/main_banner_bg_sm.png";
+const bottom_banner_image = "/images/bottom_banner_image.png";
+const bottom_banner_image_sm = "/images/bottom_banner_image_sm.png";
+const add_address_iamge = "/images/add_address_image.svg";
+const organic_vegitable_image = "/images/organic_vegitable_image.png";
+const fresh_fruits_image = "/images/fresh_fruits_image.png";
+const bottles_image = "/images/bottles_image.png";
+const maggi_image = "/images/maggi_image.png";
+const dairy_product_image = "/images/dairy_product_image.png";
+const bakery_image = "/images/bakery_image.png";
+const grain_image = "/images/grain_image.png";
+const potato_image_1 = "/images/potato_image_1.png";
+const potato_image_2 = "/images/potato_image_2.png";
+const potato_image_3 = "/images/potato_image_3.png";
+const potato_image_4 = "/images/potato_image_4.png";
+const tomato_image = "/images/tomato_image.png";
+const carrot_image = "/images/carrot_image.png";
+const apple_image = "/images/apple_image.png";
+const amul_milk_image = "/images/amul_milk_image.png";
+const coca_cola_image = "/images/coca_cola_image.png";
+const brown_bread_image = "/images/brown_bread_image.png";
+const basmati_rice_image = "/images/basmati_rice_image.png";
+const paneer_image = "/images/paneer_image.png";
+const orange_image = "/images/orange_image.png";
+const pepsi_image = "/images/pepsi_image.png";
+const wheat_flour_image = "/images/wheat_flour_image.png";
+const cheese_image = "/images/cheese_image.png";
+const eggs_image = "/images/eggs_image.png";
+const spinach_image_1 = "/images/spinach_image_1.png";
+const onion_image_1 = "/images/onion_image_1.png";
+const banana_image_1 = "/images/banana_image_1.png";
+const mango_image_1 = "/images/mango_image_1.png";
+const grapes_image_1 = "/images/grapes_image_1.png";
+const paneer_image_2 = "/images/paneer_image_2.png";
+const sprite_image_1 = "/images/sprite_image_1.png";
+const fanta_image_1 = "/images/fanta_image_1.png";
+const seven_up_image_1 = "/images/seven_up_image_1.png";
+const top_ramen_image = "/images/top_ramen_image.png";
+const knorr_soup_image = "/images/knorr_soup_image.png";
+const yippee_image = "/images/yippee_image.png";
+const maggi_oats_image = "/images/maggi_oats_image.png";
+const butter_croissant_image = "/images/butter_croissant_image.png";
+const chocolate_cake_image = "/images/chocolate_cake_image.png";
+const whole_wheat_bread_image = "/images/whole_wheat_bread_image.png";
+const vanilla_muffins_image = "/images/vanilla_muffins_image.png";
+const quinoa_image = "/images/quinoa_image.png";
+const brown_rice_image = "/images/brown_rice_image.png";
+const barley_image = "/images/barley_image.png";
 
 export const assets = {
   logo,
@@ -186,7 +186,7 @@ export const features = [
   {
     icon: leaf_icon,
     title: "Freshness Guaranteed",
-    description: "Fresh produce straight from the source.",
+    description: "Fresh produce straight = the source.",
   },
   {
     icon: coin_icon,
@@ -626,7 +626,7 @@ export const dummyProducts = [
     image: [brown_bread_image],
     description: [
       "Soft and healthy",
-      "Made from whole wheat",
+      "Made = whole wheat",
       "Ideal for breakfast and sandwiches",
     ],
     createdAt: "2025-03-25T07:17:46.018Z",
