@@ -29,7 +29,7 @@ const page = () => {
         <p className="text-2xl md:text-3xl font-medium">Best Sellers</p>
         
         <div className="mt-6">
-          <div className="flex flex-wrap gap-3">
+          <div className="grid gap-3 grid-cols-[repeat(auto-fit,minmax(14rem,1fr))]">
             {products.filter((p)=>p.inStock).slice(0,5).map((p)=>(
               <ProductsCard key={p._id} _id={p._id} name={p.name} category={p.category} price={p.price} offerPrice={p.offerPrice} image={p.image} rating={4}/>
             ))}
