@@ -1,15 +1,15 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { assets } from '../assets/assets.js'
-import {useAppContext} from '../context/AppContext.tsx'
-import NavLink from './NavLink.tsx'
+import {useAppContext} from '../context/AppContext'
+import NavLink from './NavLink'
 import { redirect } from "next/navigation"
 
 const Navbar = () => {
     const [open, setOpen] = useState<boolean>(false)
-    const {user , setUser , setShowUserLogin} = useAppContext();
+    const {user , setUser , setShowUserLogin, totalCartItems} = useAppContext();
 
     const logout = () => {
         setUser(null);
@@ -35,7 +35,7 @@ const Navbar = () => {
 
                 <div className="relative cursor-pointer">
                     <Image src={assets.cart_icon} alt="cart" width={20} height={20}/>
-                    <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">3</button>
+                    <button className="absolute -top-2 -right-3 text-xs text-white bg-primary w-[18px] h-[18px] rounded-full">{totalCartItems}</button>
                 </div>
 
                 {!user ? <button onClick={()=>setShowUserLogin(true)} className="cursor-pointer px-8 py-2 bg-primary hover:bg-primary-dull text-white rounded-full">
