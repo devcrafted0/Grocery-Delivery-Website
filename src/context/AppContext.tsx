@@ -17,12 +17,15 @@ type AppContextTypes = {
   removeProductFromCart : (itemId : string)=>void;
   cart : Cart;
   totalCartItems : number;
+  searchQuery : string;
+  setSearchQuery : React.Dispatch<React.SetStateAction<string>>;
 }
 
-type User = {
-  id: string;
-  name: string;
-  email: string;
+export type User = {
+  name? : string;
+  email : string;
+  password : string;
+  state : string;
 };
 
 type Cart = {
@@ -40,6 +43,9 @@ export const AppProvider = ({children} : {children : ReactNode}) => {
     const [cart , setCart] = useState<Cart>({});
     
     const [totalCartItems , setTotalCartItems] = useState<number>(0);
+
+    // Search Query
+    const [searchQuery , setSearchQuery] = useState<string>('');
 
     const fetchProducts = () => {
       const fetchedproducts = dummyProducts;
@@ -61,7 +67,7 @@ export const AppProvider = ({children} : {children : ReactNode}) => {
       console.log(cart);
       setTotalCartItems(Object.values(cart).reduce((sum, num) => sum + num, 0))
 
-      toast.success("Cart Item Added !", {
+      toast.success("Added To Cart ", {
         duration: 2000,
       });
     }
@@ -75,7 +81,7 @@ export const AppProvider = ({children} : {children : ReactNode}) => {
         cart[itemId] -= 1;        
       }
       
-      toast.error("Cart Item Was Removed", {
+      toast.error("Removed From Cart", {
         duration: 3000,
       });
       
@@ -85,7 +91,7 @@ export const AppProvider = ({children} : {children : ReactNode}) => {
 
     // ---------------------------------------------------
 
-    const value : AppContextTypes = {user , setUser , isSeller , setIsSeller, showUserLogin , setShowUserLogin , products , cart , addProductFromCart , removeProductFromCart, totalCartItems};
+    const value : AppContextTypes = {user , setUser , isSeller , setIsSeller, showUserLogin , setShowUserLogin , products , cart , addProductFromCart , removeProductFromCart, totalCartItems, searchQuery , setSearchQuery};
 
     return <AppContext.Provider value={value}>
         {children}

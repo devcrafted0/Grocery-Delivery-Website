@@ -6,9 +6,16 @@ import MainBanner from "@/components/MainBanner";
 import NewsLetter from "@/components/NewsLetter";
 import ProductsCard from "@/components/ProductsCard";
 import { useAppContext } from "@/context/AppContext";
+import {redirect} from 'next/navigation'
 
 const page = () => {
-  const {products} = useAppContext();
+  const {products, searchQuery, setSearchQuery} = useAppContext();
+
+
+  if(searchQuery !== ''){
+    redirect('/all-products');
+  }
+
   return (
     <div className="mt-10 px-6 md:px-16 lg:px-24 xl:px-32">
       <MainBanner />

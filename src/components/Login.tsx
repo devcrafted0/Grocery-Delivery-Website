@@ -11,7 +11,7 @@ type Data = {
 
 const Login = () => {
   const [state, setState] = useState("login");
-  const {setShowUserLogin} = useAppContext();
+  const {setShowUserLogin, setUser} = useAppContext();
 
   // state for input value
   const [data, setData] = useState<Data>({
@@ -37,6 +37,8 @@ const Login = () => {
   // handle submit form
   const handleSubmit = (e :FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setUser(data);
+    setShowUserLogin(false);
   };
 
   return( 

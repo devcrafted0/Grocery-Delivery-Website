@@ -7,10 +7,17 @@ import {useAppContext} from '../context/AppContext'
 import NavLink from './NavLink'
 import { redirect } from "next/navigation"
 import Login from "./Login"
+import { useRouter } from "next/navigation"
 
 const Navbar = () => {
+    const router = useRouter();
     const [open, setOpen] = useState<boolean>(false)
-    const {user , setUser , setShowUserLogin, totalCartItems , showUserLogin} = useAppContext();
+    const {user , setUser , setShowUserLogin, totalCartItems , showUserLogin, searchQuery , setSearchQuery} = useAppContext();
+
+    const goHome = () => {
+        setSearchQuery("");
+        router.push("/");
+    };
 
     const logout = () => {
         setUser(null);
@@ -28,11 +35,14 @@ const Navbar = () => {
 
                 {/* Desktop Menu */}
                 <div className="hidden sm:flex items-center gap-8">
-                    <NavLink href="/">Home</NavLink>
+                    <NavLink href="/" onClick={goHome}>Home</NavLink>
                     <NavLink href="/all-products">All Products</NavLink>
                     <Link href="/">Contact</Link>
                     <div className="hidden lg:flex items-center text-sm gap-2 border border-gray-300 px-3 rounded-full">
-                        <input className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products" />
+                        <input className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products"
+                        onChange={(e)=>setSearchQuery(e.target.value)}
+                        value={searchQuery}
+                        />
                         <Image src={assets.search_icon} alt="search" width={20} height={20}/>
                     </div>
 
@@ -59,7 +69,7 @@ const Navbar = () => {
 
                 {/* Mobile Menu */}
                 <div className={`${open ? 'flex' : 'hidden'} absolute top-[60px] left-0 w-full bg-white shadow-md py-4 flex-col items-start gap-2 px-5 text-sm md:hidden`}>
-                    <NavLink onClick={()=>setOpen(false)} href="/" className="block">Home</NavLink>
+                    <NavLink onClick={()=>{setOpen(false) ; goHome()}} href="/" className="block">Home</NavLink>
                     <NavLink onClick={()=>setOpen(false)} href="/all-products" className="block">All Products</NavLink>
                     <Link onClick={()=>setOpen(false)} href="/" className="block">Contact</Link>
                     {user && <NavLink onClick={()=>setOpen(false)} href='/orders'>
