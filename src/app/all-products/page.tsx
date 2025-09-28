@@ -25,11 +25,15 @@ const page = () => {
         <div className="w-16 h-0.5 bg-primary rounded-full"></div>
       </div>
 
-      <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(15rem,max-content))]">
+      {filteredProducts.length > 0 ? <div className="grid gap-5 grid-cols-[repeat(auto-fit,minmax(14rem,1fr))] lg:grid-cols-[repeat(auto-fit,minmax(15rem,max-content))]">
         {filteredProducts.filter(product => product.inStock).map((product , index)=>(
           <ProductsCard key={index} _id={product._id} name={product.name} image={product.image} category={product.category} rating={product.rating!} offerPrice={product.offerPrice} price={product.price}/>
         ))}
-      </div>
+      </div> : (
+        <p>No Product Found...</p>
+      )}
+
+      
     </div>
   )
 }
